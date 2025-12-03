@@ -10,7 +10,7 @@ const alanSans = Alan_Sans({
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-12 bg-white dark:bg-black sm:items-start">
         <div className="flex flex-col items-center gap-5 text-center">
           <motion.div
             whileHover={{
@@ -22,7 +22,6 @@ export default function Home() {
               ease: "easeInOut",
             }}
             style={{
-              cursor: "pointer",
               display: "inline-block",
             }}
           >
@@ -41,12 +40,35 @@ export default function Home() {
             <br /> Have a look at my projects below!
           </p>
         </div>
-        {/* <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"> */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-10">
           {/* div should be a box for each project */}
-          <div className="bg-gray-100 br-10">
-            <p className="">Project 1</p>
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            style={{
+              cursor: "pointer",
+              display: "inline-block",
+            }}
+          >
+            <a href="https://github.com/unsw-cse-comp99-3900/capstone-project-25t3-3900-w12a-date/settings">
+              <div className="bg-gray-100 br-10 rounded-2xl">
+                <h1 className="text-2xl font-bold px-5 py-2">Invoice Mate</h1>
+                <p className="text-sm px-2 pb-4 pl-4">
+                  InvoiceMate enables small and medium enterprises to
+                  efficiently create, validate, and deliver electronic invoices
+                  in compliance with Australian E-invoicing standards.This
+                  platform aims to replace traditional, cumbersome invoicing
+                  methods with a user-friendly, efficient, and accurate
+                  solution.
+                </p>
+              </div>
+            </a>
+          </motion.div>
           <div className="col-span-1">
             <p>Project 1</p>
           </div>{" "}
@@ -56,9 +78,6 @@ export default function Home() {
           <div className="col-span-1">
             <p>Project 1</p>
           </div>{" "}
-          <div className="col-span-1">
-            <p>Project 1</p>
-          </div>
         </div>
         <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           Looking for a starting point or more instructions? Head over to{" "}
