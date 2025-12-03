@@ -1,5 +1,6 @@
 import { Alan_Sans } from "next/font/google";
 import * as motion from "motion/react-client";
+import selfImg from "../public/selfPortrait.png";
 
 const alanSans = Alan_Sans({
   variable: "--font-alan-sans",
@@ -39,7 +40,7 @@ export default function Home() {
             <br /> Have a look at my projects below!
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-3 gap-10 pt-10 pb-10">
           {/* div should be a box for each project */}
           <motion.div
             whileHover={{
@@ -126,6 +127,8 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
+
+        {/* <img src={selfImg} alt="Self Portrait" /> */}
       </main>
     </div>
   );
