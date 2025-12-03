@@ -1,39 +1,83 @@
 import Image from "next/image";
+import { Alan_Sans } from "next/font/google";
+import * as motion from "motion/react-client";
 
+const alanSans = Alan_Sans({
+  variable: "--font-alan-sans",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className="flex flex-col items-center gap-5 text-center">
+          <motion.div
+            whileHover={{
+              scale: 1.2,
+              textDecoration: "underline",
+            }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+            style={{
+              cursor: "pointer",
+              display: "inline-block",
+            }}
+          >
+            <p className={`${alanSans.className} text-2xl`}>
+              Mathushanth Shanmugam
+            </p>
+          </motion.div>
+          <p
+            className={`pr-5 ${alanSans.className} text-left text-md font-light text-gray-800`}
+          >
+            I am an aspiring software developer, recently graduated from The
+            University Of New South Wales specializing in Computer Science,
+            favouring towards Backend Development. I have a strong passion for
+            creating efficient and scalable software solutions to problems we
+            face everyday! <br />
+            <br /> Have a look at my projects below!
           </p>
         </div>
+        {/* <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left"> */}
+        <div className="grid grid-cols-3 gap-4">
+          {/* div should be a box for each project */}
+          <div className="bg-gray-100 br-10">
+            <p className="">Project 1</p>
+          </div>
+          <div className="col-span-1">
+            <p>Project 1</p>
+          </div>{" "}
+          <div className="col-span-1">
+            <p>Project 1</p>
+          </div>
+          <div className="col-span-1">
+            <p>Project 1</p>
+          </div>{" "}
+          <div className="col-span-1">
+            <p>Project 1</p>
+          </div>
+        </div>
+        <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          Looking for a starting point or more instructions? Head over to{" "}
+          <a
+            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="font-medium text-zinc-950 dark:text-zinc-50"
+          >
+            Templates
+          </a>{" "}
+          or the{" "}
+          <a
+            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="font-medium text-zinc-950 dark:text-zinc-50"
+          >
+            Learning
+          </a>{" "}
+          center.
+        </p>
+        {/* </div> */}
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
             className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
