@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Alan_Sans } from "next/font/google";
 import * as motion from "motion/react-client";
 
@@ -10,7 +9,7 @@ const alanSans = Alan_Sans({
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-6xl flex-col items-center justify-between py-32 px-12 bg-white dark:bg-black sm:items-start">
+      <main className="flex min-h-screen w-full max-w-6xl flex-col items-center justify-start py-32 px-12 bg-white dark:bg-black sm:items-start gap-24`">
         <div className="flex flex-col items-center gap-5 text-center">
           <motion.div
             whileHover={{
